@@ -133,6 +133,10 @@
       <Project>{962CB2C0-DE3B-CF9C-6BBB-37513AFE916C}</Project>
       <Name>TestTask.Plugins</Name>
     </ProjectReference>
+    <ProjectReference Include="TestTask.csproj">
+      <Project>{C6992201-9820-FECE-AA3A-C09A291CCB34}</Project>
+      <Name>TestTask</Name>
+    </ProjectReference>
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Assets\Standard Assets\Editor\CrossPlatformInput\CrossPlatformInputInitialize.cs" />
