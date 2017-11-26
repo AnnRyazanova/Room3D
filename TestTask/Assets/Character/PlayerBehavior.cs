@@ -15,7 +15,7 @@ public class PlayerBehavior : MonoBehaviour {
 
     private Rigidbody player;
     private float rotationX;
-
+    private float gravity = -9.8f;
     private CharacterController characterController;
     
 
@@ -28,6 +28,7 @@ public class PlayerBehavior : MonoBehaviour {
         // отключение влияния среды на игрока
         if (player != null)
             player.freezeRotation = true;
+        
     }
 
     // управление "головой" (камерой) по движениям мыши
@@ -52,8 +53,10 @@ public class PlayerBehavior : MonoBehaviour {
         var verticalMovements = Input.GetAxis("Vertical") * speed;
 
         Vector3 movement = new Vector3(horizontalMovements, 0, verticalMovements);
+      
         // Ограничение на скорость движения по диагонали
         movement = Vector3.ClampMagnitude(movement, speed);
+        //movement.y = gravity;
         movement *= Time.deltaTime;
         // Игрок не будет ходить сквозь пол, стены и другие объекты
         characterController.Move(transform.TransformDirection(movement));
