@@ -5,6 +5,9 @@ using UnityEngine;
 
 public class BoxTarget : MonoBehaviour
 {
+
+    private float angle = 23f;
+
     void Start ()
     {
         
@@ -12,7 +15,7 @@ public class BoxTarget : MonoBehaviour
 
     void Update()
     {
-        
+        transform.RotateAround(new Vector3(0, 0, 0), new Vector3(0, 1, 0), angle * Time.deltaTime);
     }
 
     public void Destroy()
