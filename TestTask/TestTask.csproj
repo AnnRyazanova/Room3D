@@ -90,10 +90,11 @@
     </ProjectReference>
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Assets\Character\BoxTarget.cs" />
-    <Compile Include="Assets\Character\MouseLook.cs" />
-    <Compile Include="Assets\Character\PlayerBehavior.cs" />
-    <Compile Include="Assets\Character\RayManipulate.cs" />
+    <Compile Include="Assets\Scripts\BoxTarget.cs" />
+    <Compile Include="Assets\Scripts\Explosion.cs" />
+    <Compile Include="Assets\Scripts\MouseLook.cs" />
+    <Compile Include="Assets\Scripts\PlayerBehavior.cs" />
+    <Compile Include="Assets\Scripts\RayManipulate.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Assets\Standard Assets\Characters\FirstPersonCharacter\FirstPersonCharacterGuidelines.txt" />

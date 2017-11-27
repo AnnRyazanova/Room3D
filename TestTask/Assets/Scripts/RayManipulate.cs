@@ -14,6 +14,7 @@ public class RayManipulate : MonoBehaviour
         Cursor.visible = false;
 	}
 
+    // Прицел
     private void OnGUI()
     {
         int sizePoint = 12;
@@ -21,8 +22,8 @@ public class RayManipulate : MonoBehaviour
         float positionY = camera.pixelHeight / 2 - sizePoint / 2;
         GUI.Label(new Rect(positionX, positionY, sizePoint, sizePoint), "*");
     }
-
-    public Vector3 r;
+    
+    // Пускаем лучи, если они находят коробку, то разрушаем её
 	void Update ()
     {
         Vector3 position = new Vector3(camera.pixelWidth / 2, camera.pixelHeight / 2, 0);
